@@ -49,6 +49,35 @@ public class StringMetodusok {
         
         // kezdődik-e
         System.out.println(szoveg.startsWith("k"));
+        
+        //a keresett karakter(ek) első poziciója
+        System.out.println(szoveg.indexOf("t"));
+        System.out.println(szoveg.indexOf("egy"));
+        
+        //a keresett karakter(ek) utolsó poziciója
+        System.out.println(szoveg.lastIndexOf("t"));
+        
+        //string üres-e
+        System.out.println(szoveg.isEmpty());
+        String szoveg2 = "";
+        System.out.println(szoveg2.isEmpty());
+        
+        //lecseréli a szövegben a megadott karakter(ek)et más karakter(ek)re
+        System.out.println(szoveg.replace("tetszőleges", "akármilyen"));
+        System.out.println(szoveg.replace("e", "b"));
+        
+        //lecseréli a szövegben az első megadott karakter(ek)et más megadott karakter(ek)re
+        System.out.println(szoveg.replaceFirst("e", "b"));
+        
+        //szétszedése tömbbe megadott karakterek mentén
+        System.out.println(szoveg.split(" "));
+        
+        //nem string típusú adat tringgé alakítása
+        Integer szam = 512;
+        System.out.println(szam.toString());
+        
+        //stringből substring kivétele
+        System.out.println(szoveg.substring(3, 6));
     }
     
 }
