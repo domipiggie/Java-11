@@ -5,6 +5,8 @@
  */
 package stringmetodusok;
 
+import java.util.Scanner;
+
 /**
  *
  * @author user3
@@ -78,6 +80,43 @@ public class StringMetodusok {
         
         //stringből substring kivétele
         System.out.println(szoveg.substring(3, 6));
+        
+        
+        
+        //FELADATOKSZ:
+        //1: Kérjük be egy diák teljes nevét a fullName változóba!
+        Scanner bill = new Scanner(System.in);
+        
+        String fullName = bill.next() + bill.nextLine();
+        
+        
+        //2: Szedjük szét a nevet firstName és lastName változókba.
+        String[] darabolt = fullName.split(" ");
+        String firstName = darabolt[1];
+        String lastName = darabolt[0];
+        
+        
+        //3: Kérjük be az osztály azonosítóját a classId változóba. pl 2022ea vagy 2018ce
+        String classId = bill.next();
+        
+        
+        //4: Ha a betűjele 'e'-vel kezdődik, alakítsuk 'E'-re.
+        classId = classId.replaceFirst("e", "E");
+        
+        
+        //5: Ha az évfolyam száma 2022-nél kisebb, akkor az osztályazonosító minden betűje legyen nagy
+        if (Integer.parseInt(classId.substring(0,4)) < 2022)
+        {
+            classId = classId.toUpperCase();
+        }
+        System.out.println(classId);
+        
+        
+        //6: Ha az osztály minden betűjele nagybetűs, írjuk ki hogy estis osztály.
+        String classIdLetters = classId.substring(4);
+        if (classIdLetters == classIdLetters.toUpperCase()){
+            System.out.println("Estis osztály");
+        }
     }
     
 }
