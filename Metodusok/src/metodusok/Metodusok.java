@@ -19,7 +19,7 @@ public class Metodusok {
     public static void main(String[] args) {
         Scanner bill = new Scanner(System.in);
 
-        double szam1 = bill.nextDouble();
+        /*double szam1 = bill.nextDouble();
         double szam2 = bill.nextDouble();
 
         System.out.println(atlag(szam1, szam2));
@@ -37,9 +37,14 @@ public class Metodusok {
         
         for(int i = 0; i < 20; i++){
             randomSzamok[i] = randomHatarokkal(randomHatar1, randomHatar2);
-            System.out.println(randomSzamok[i]);
-        }
+            System.out.print(randomSzamok[i] + "\t");
+        }*/
+        System.out.print("Kérem adja meg a gúla alapjának hosszát: ");
+        double gulaAlapHossz = bill.nextDouble();
+        System.out.print("Kérem adja meg a gúla magasságát: ");
+        double gulaMagassag = bill.nextDouble();
         
+        System.out.println("\n" + negyzetGulaTerfogat(gulaAlapHossz, gulaMagassag));
     }
 
     public static double atlag(double szam1, double szam2) {
@@ -61,5 +66,9 @@ public class Metodusok {
         int random = (int)(Math.random()*(felsoHatar-alsoHatar+1))+alsoHatar;
         
         return random;
+    }
+    
+    public static double negyzetGulaTerfogat(double a, double m){
+        return (Math.pow(a, 2) * m)/3;
     }
 }
