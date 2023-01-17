@@ -12,7 +12,7 @@ public class MetodusGyak1129 {
         Scanner bill = new Scanner(System.in);
         System.out.println(isEveryDigitEven(246));
         
-        System.out.println(isMiddleNumber(-1, -2, -3));
+        System.out.println(isMiddleNumber(2,8,5));
         
         matrixPrint(5);
     }
