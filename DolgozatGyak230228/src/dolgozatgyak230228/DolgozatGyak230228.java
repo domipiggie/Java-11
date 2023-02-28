@@ -122,7 +122,7 @@ public class DolgozatGyak230228 {
         
         for (int i = 0; i < matrix.length; i++){
             for (int j = 0; j < matrix[i].length; j++){
-                stat[matrix[i][j]] += 1;
+                stat[matrix[i][j]]++;
             }
         }
         
