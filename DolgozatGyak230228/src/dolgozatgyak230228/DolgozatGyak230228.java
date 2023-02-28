@@ -20,10 +20,8 @@ public class DolgozatGyak230228 {
         printMatrix(matrix);
         
         int[] stat = matrixStatistic(matrix);
-        for (int i = 0; i < stat.length; i++){
-            if (stat[i] != 0){
-                System.out.println(i+"-ből/ból "+stat[i]+"db van");
-            }
+        for (int i = 65; i <= 69; i++){
+            System.out.println(i+"-ből/ból "+stat[i]+"db van");
         }
     }
     
