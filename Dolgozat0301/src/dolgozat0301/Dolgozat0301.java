@@ -11,7 +11,8 @@ public class Dolgozat0301 {
         printMinMaxDiffPerLine(matrix);
         
         System.out.println("\n2. Feladat");
-        if (anyPrimeInMatrix(matrix)){
+        boolean anyPrime = anyPrimeInMatrix(matrix);
+        if (anyPrime){
             System.out.println("A mátrixban van prímszám.");
         }
         else {
@@ -19,8 +20,8 @@ public class Dolgozat0301 {
         }
         
         System.out.println("\n3. Feladat");
-        int[] firstPrimePos = getFirstPrimePos(matrix);
-        if (firstPrimePos[0] != -1){
+        if (anyPrime){
+            int[] firstPrimePos = getFirstPrimePos(matrix);
             System.out.println("Az első prímszám a(z) "+(firstPrimePos[0]+1)+". sor "+(firstPrimePos[1]+1)+". eleme.");
         }
     }
