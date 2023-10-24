@@ -3,13 +3,15 @@ import java.util.Collections;
 
 public class Zeneszam {
     private int min, sec;
-    private String stationID, songID;
+    private String stationID, songAuthor, songTitle;
 
     public Zeneszam(String[] split) {
         this.stationID = split[0];
         this.min = Integer.parseInt(split[1]);
         this.sec = Integer.parseInt((split[2]));
-        this.songID = String.join(" ", Arrays.copyOfRange(split, 3,split.length));
+        String songData = String.join(" ", Arrays.copyOfRange(split, 3,split.length));
+        this.songAuthor = songData.split(":")[0];
+        this.songTitle = songData.split(":")[1];
     }
 
     public int getMin() {
@@ -36,21 +38,30 @@ public class Zeneszam {
         this.stationID = stationID;
     }
 
-    public String getSongID() {
-        return songID;
+    public String getSongAuthor() {
+        return songAuthor;
     }
 
-    public void setSongID(String songID) {
-        this.songID = songID;
+    public void setSongAuthor(String songAuthor) {
+        this.songAuthor = songAuthor;
+    }
+
+    public String getSongTitle() {
+        return songTitle;
+    }
+
+    public void setSongTitle(String songTitle) {
+        this.songTitle = songTitle;
     }
 
     @Override
     public String toString() {
         return "Zeneszam{" +
-                ", stationID='" + stationID + '\'' +
                 "min=" + min +
                 ", sec=" + sec +
-                ", songID='" + songID + '\'' +
+                ", stationID='" + stationID + '\'' +
+                ", songAuthor='" + songAuthor + '\'' +
+                ", songTitle='" + songTitle + '\'' +
                 '}';
     }
 }
