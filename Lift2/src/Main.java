@@ -63,5 +63,18 @@ public class Main {
 
         System.out.println("A lift " + upWithoutPassengers + " alkalommal indult felfelé utasok nélkül.");
         System.out.println("A lift " + upWithPassengers + " alkalommal indult felfelé utasokkal.");
+
+        System.out.println("\n4. Feladat:");
+        int[] teams = new int[teamCount];
+
+        for (int i = 0; i < igenyek.size(); i++){
+            teams[Integer.parseInt(igenyek.get(i).getTeamNumber())-1] = 1;
+        }
+
+        System.out.println("A liftet a következő szerelőcsapatok vették igénybe: ");
+        for (int i = 0; i < teams.length; i++){
+            System.out.print(teams[i]==1 ? i+1 + " " : "");
+        }
+        System.out.println();
     }
 }
