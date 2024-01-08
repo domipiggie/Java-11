@@ -26,10 +26,10 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-        System.out.println("\n1. Feladat");
+        System.out.println("\n3. Feladat");
         System.out.println("„A lift a(z) " + igenyek.get(igenyek.size()-1).getDestinationFloor() + ". szinten áll az utolsó igény teljesítése után.");
 
-        System.out.println("\n2. Feladat");
+        System.out.println("\n4. Feladat");
         int minLevel = igenyek.get(0).getStartFloor();
         int maxLevel = igenyek.get(0).getStartFloor();
 
@@ -45,7 +45,7 @@ public class Main {
         System.out.println("A legmagasabb érintett szint: " + maxLevel);
         System.out.println("A legkisebb érintett szint: " + minLevel);
 
-        System.out.println("\n3. Feladat");
+        System.out.println("\n5. Feladat");
         int upWithPassengers = 0;
         int upWithoutPassengers = 0;
 
@@ -64,17 +64,20 @@ public class Main {
         System.out.println("A lift " + upWithoutPassengers + " alkalommal indult felfelé utasok nélkül.");
         System.out.println("A lift " + upWithPassengers + " alkalommal indult felfelé utasokkal.");
 
-        System.out.println("\n4. Feladat:");
+
         int[] teams = new int[teamCount];
 
         for (int i = 0; i < igenyek.size(); i++){
             teams[Integer.parseInt(igenyek.get(i).getTeamNumber())-1] = 1;
         }
 
-        System.out.println("A liftet a következő szerelőcsapatok vették igénybe: ");
+        System.out.println("A liftet a következő szerelőcsapatok nem vették igénybe: ");
         for (int i = 0; i < teams.length; i++){
-            System.out.print(teams[i]==1 ? i+1 + " " : "");
+            System.out.print(teams[i]==0 ? i+1+" " : "");
         }
         System.out.println();
+
+        System.out.println("\n7. Feladat");
+        
     }
 }
