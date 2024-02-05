@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.domipiggie.totojavafx.TotoController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+   <children>
+      <Label text="Kérem a forduló eredményeit [1, 2, X]:" />
+      <TextField fx:id="resultField" maxWidth="300.0" onKeyTyped="#checkResult" prefWidth="300.0" />
+      <HBox prefHeight="0.0" prefWidth="300.0">
+         <children>
+            <CheckBox fx:id="incorrectCount" disable="true" mnemonicParsing="false" />
+             <Label text="Nem megfelelő a karakterek száma (">
+                 <padding>
+                     <Insets left="5.0" />
+                 </padding></Label>
+             <Label fx:id="incorrectLengthLabel" text="0" />
+             <Label text=")" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="300.0">
+         <children>
+            <CheckBox fx:id="incorrectChar" disable="true" mnemonicParsing="false" />
+            <Label text="Helytelen karakter az eredményben (">
+               <padding>
+                  <Insets left="5.0" />
+               </padding></Label>
+            <Label fx:id="incorrectCharLabel" />
+            <Label text=")" />
+         </children>
+      </HBox>
+      <Button fx:id="saveButton" disable="true" mnemonicParsing="false" text="Eredmények mentése" />
+   </children>
+</VBox>

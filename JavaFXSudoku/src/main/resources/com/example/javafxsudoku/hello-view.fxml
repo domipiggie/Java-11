@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="185.0" maxWidth="400.0" minHeight="185.0" minWidth="400.0" prefHeight="185.0" prefWidth="400.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxsudoku.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox prefHeight="0.0" prefWidth="400.0">
+         <children>
+            <Label style="-fx-pref-height: 25;" text="Új feladvány mérete:" />
+            <Button fx:id="minus" mnemonicParsing="false" onAction="#counterDecrease" style="-fx-pref-height: 25; -fx-pref-width: 25;" text="-" />
+            <Label fx:id="counter" alignment="CENTER" style="-fx-pref-height: 25; -fx-pref-width: 25;" text="4" />
+            <Button fx:id="plus" mnemonicParsing="false" onAction="#counterIncrease" style="-fx-pref-height: 25; -fx-pref-width: 25;" text="+" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="400.0">
+         <children>
+            <Label text="Kezdőállapot:" />
+         </children>
+      </HBox>
+      <HBox prefHeight="26.0" prefWidth="400.0">
+         <children>
+            <TextField fx:id="startState" onKeyTyped="#lengthCalc" prefHeight="26.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="400.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Hossz:" />
+                  <Label fx:id="length" text="0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" text="Ellenőrzés">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
