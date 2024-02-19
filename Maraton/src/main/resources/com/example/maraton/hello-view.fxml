@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-pref-width: 350;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.maraton.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox prefHeight="21.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="50.0" prefWidth="196.0">
+               <children>
+                  <HBox prefHeight="25.0" prefWidth="223.0" spacing="4.0">
+                     <children>
+                        <Label text="Táv:" />
+                        <ChoiceBox fx:id="tavId" prefHeight="25.0" prefWidth="172.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="0.0" prefWidth="100.0" spacing="3.0">
+                     <children>
+                        <Label text="Idő [óra:perc:mp]:" />
+                        <TextField fx:id="timeIn" prefHeight="25.0" prefWidth="100.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="calcualteBtn" onMouseClicked="#calculateSpeed" mnemonicParsing="false" prefHeight="50.0" prefWidth="80.0" text="Button" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="460.0">
+         <children>
+            <Label text="Átlagsebesség [km/h]:" />
+            <Label fx:id="kmHour" text="0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="460.0">
+         <children>
+            <Label text="Átlagsebesség [m/s]:" />
+            <Label fx:id="meterSecond" text="0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
