@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.autokjavafx.AutokController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button onAction="#addCar" layoutX="74.0" layoutY="173.0" mnemonicParsing="false" text="Button" />
+            <HBox prefHeight="0.0" prefWidth="200.0">
+               <children>
+                  <Label text="Márka:" />
+                  <TextField fx:id="marka" />
+               </children>
+            </HBox>
+            <HBox layoutY="26.0" prefHeight="0.0" prefWidth="200.0">
+               <children>
+                  <Label text="Típus:" />
+                  <TextField fx:id="tipus" />
+               </children>
+            </HBox>
+            <HBox layoutY="52.0" prefHeight="0.0" prefWidth="200.0">
+               <children>
+                  <Label text="Hengerűrtartalom:" />
+                  <TextField prefHeight="26.0" prefWidth="102.0" fx:id="henger" />
+               </children>
+            </HBox>
+            <HBox layoutY="78.0" prefHeight="0.0" prefWidth="200.0">
+               <children>
+                  <Label text="Szállítható személyek:" />
+                  <TextField fx:id="szemelyek" prefHeight="26.0" prefWidth="85.0" />
+               </children>
+            </HBox>
+            <HBox layoutY="104.0" prefHeight="0.0" prefWidth="200.0">
+               <children>
+                  <Label text="Rendszám:" />
+                  <TextField fx:id="rendszam" prefHeight="26.0" prefWidth="125.0" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
