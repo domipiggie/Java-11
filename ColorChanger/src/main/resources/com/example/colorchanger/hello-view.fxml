@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<Pane minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.colorchanger.HelloController">
+  <children>
+     <Circle fx:id="circle" centerX="100.0" centerY="100.0" fill="DODGERBLUE" onMouseClicked="#setCircleColor" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fx:id="ellipse" centerX="100.0" centerY="300.0" onMouseClicked="#setEllipseColor" radiusX="80.0" radiusY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9666666388511658" green="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+         <effect>
+            <MotionBlur />
+         </effect>
+      </Ellipse>
+      <Rectangle fx:id="rectangle" arcHeight="50.0" arcWidth="50.0" height="50.0" onMouseClicked="#setRectangleColor" stroke="BLACK" strokeType="INSIDE" width="100.0" x="200.0" y="75.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.11999999731779099" blue="0.8141379356384277" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="0.9666666388511658" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Arc fx:id="arch" centerX="400.0" centerY="100.0" fill="DODGERBLUE" length="270.0" onMouseEntered="#archEnter" onMouseExited="#archLeave" radiusX="50.0" radiusY="50.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
+      <Circle fx:id="circle2" centerX="300.0" centerY="250.0" fill="DODGERBLUE" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+      <ColorPicker fx:id="picker" layoutX="375.0" layoutY="250.0" onAction="#setCircle2Color" />
+      <Rectangle fx:id="rectangle2" arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="35.0" layoutX="400.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" width="35.0" />
+      <ScrollBar fx:id="hslider" blockIncrement="1.0" layoutX="395.0" layoutY="390.0" min="30.0" onMouseMoved="#setRectangleWidth" value="30.0" />
+      <ScrollBar fx:id="vslider" blockIncrement="1.0" layoutX="490.0" layoutY="300.0" min="30.0" onMouseMoved="#setRectangleHeight" orientation="VERTICAL" value="30.0" />
+      <ImageView fitHeight="200.0" fitWidth="350.0" layoutX="30.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://static.wikia.nocookie.net/fortnite/images/6/6c/Get_Griddy_%282%29_-_Promo_-_Fortnite.jpg/revision/latest/scale-to-width-down/1000?cb=20231109002221" />
+         </image>
+      </ImageView>
+  </children>
+</Pane>
