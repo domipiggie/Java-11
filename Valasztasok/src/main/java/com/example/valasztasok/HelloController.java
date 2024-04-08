@@ -19,6 +19,14 @@ public class HelloController {
     public TextField utonev;
     @FXML
     public TextField part;
+    @FXML
+    public TextField searchname;
+    @FXML
+    public TextField searchpart;
+    @FXML
+    public Label snameresult;
+    @FXML
+    public Label spartresult;
     ArrayList<Jelolt> jeloltek = new ArrayList<>();
 
     @FXML
@@ -63,5 +71,39 @@ public class HelloController {
         } catch (Exception e){
             return;
         }
+    }
+
+    @FXML
+    protected void search(){
+        if (!searchname.getText().equals("")) nameSearch();
+        if (!searchpart.getText().equals("")) partSearch();
+    }
+
+    @FXML
+    protected void nameSearch(){
+        Jelolt j = null;
+        int i = 0;
+        while (j==null && i < jeloltek.size()){
+            if ((jeloltek.get(i).getVezeteknev() + " " + jeloltek.get(i).getUtonev()).equals(searchname.getText())){
+                j = jeloltek.get(i);
+            }
+            i++;
+        }
+        if (j == null){
+            snameresult.setText("Nincs találat");
+            return;
+        }
+        snameresult.setText(j.toString());
+    }
+
+    @FXML
+    protected void partSearch(){
+        int szavazatok = 0;
+        for (Jelolt j:jeloltek){
+            if (j.getPart().equals(searchpart.getText())){
+                szavazatok+=j.getSzavazatok();
+            }
+        }
+        spartresult.setText("A párt "+szavazatok+" db szavazatot kapott.");
     }
 }

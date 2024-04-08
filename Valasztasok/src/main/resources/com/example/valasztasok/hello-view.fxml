@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane prefHeight="240.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.valasztasok.HelloController">
+<Pane prefHeight="500.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.valasztasok.HelloController">
  <children>
     <Button layoutX="103.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#readFile" text="Adatok beolvasása" />
       <Label layoutX="14.0" layoutY="43.0" text="Választókerület: " />
@@ -16,6 +16,19 @@
       <TextField fx:id="veznev" layoutX="103.0" layoutY="103.0" prefHeight="25.0" prefWidth="115.0" />
       <TextField fx:id="utonev" layoutX="103.0" layoutY="133.0" prefHeight="25.0" prefWidth="115.0" />
       <TextField fx:id="part" layoutX="103.0" layoutY="163.0" prefHeight="25.0" prefWidth="115.0" />
-      <Button layoutX="106.0" layoutY="201.0" mnemonicParsing="false" text="Jelölt hozzáadása" onMouseClicked="#addJelolt"/>
+      <Button layoutX="106.0" layoutY="201.0" mnemonicParsing="false" onMouseClicked="#addJelolt" text="Jelölt hozzáadása" />
+      <TextField fx:id="searchname" layoutX="86.0" layoutY="250.0" promptText="Keresendő jelölt neve" />
+      <TextField fx:id="searchpart" layoutX="86.0" layoutY="280.0" promptText="Keresendő párt neve" />
+      <Button layoutX="133.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#search" text="Keresés" />
+      <HBox alignment="TOP_CENTER" layoutX="61.0" layoutY="348.0" prefHeight="17.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="snameresult" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="61.0" layoutY="370.0" prefHeight="17.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="spartresult" />
+         </children>
+      </HBox>
  </children>
 </Pane>
