@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="350.0" prefWidth="450.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.mypersonalcalendar.MainController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+      <HBox prefHeight="17.0" prefWidth="410.0">
+         <children>
+            <Label text="FŐMENÜ">
+               <font>
+                  <Font name="Comic Sans MS" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="170.0" prefWidth="410.0">
+         <children>
+            <Button fx:id="createEventButton" mnemonicParsing="false" onAction="#createEvent" prefHeight="170.0" prefWidth="119.0" text="Létrehoz">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="250.0" prefWidth="28.0" />
+            <Button fx:id="eventListButton" mnemonicParsing="false" onAction="#eventList" prefHeight="170.0" prefWidth="119.0" text="Lista">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="250.0" prefWidth="28.0" />
+            <Button fx:id="searchEventButton" mnemonicParsing="false" onAction="#searchEvent" prefHeight="170.0" prefWidth="120.0" text="Keresés">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Pane prefHeight="50.0" prefWidth="410.0" />
+</VBox>

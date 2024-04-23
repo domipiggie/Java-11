@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="350.0" prefWidth="450.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mypersonalcalendar.CreateEventController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+        <HBox prefHeight="41.0" prefWidth="410.0">
+            <children>
+                <Label text="Esemény létrehozása">
+                    <font>
+                        <Font name="Comic Sans MS" size="30.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+      <HBox prefHeight="30.0" prefWidth="410.0">
+         <children>
+            <Label text="Név:">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="eventNameTextField" prefHeight="25.0" prefWidth="280.0">
+               <HBox.margin>
+                  <Insets left="5.0" top="4.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="410.0">
+        <children>
+            <Label text="Dátum:">
+                <font>
+                    <Font name="Comic Sans MS" size="20.0" />
+                </font>
+            </Label>
+            <TextField fx:id="eventDateTextField" prefHeight="25.0" prefWidth="256.0">
+                <HBox.margin>
+                    <Insets left="5.0" top="4.0" />
+                </HBox.margin>
+            </TextField>
+        </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="410.0">
+        <children>
+            <Label text="Helyszín:">
+                <font>
+                    <Font name="Comic Sans MS" size="20.0" />
+                </font>
+            </Label>
+            <TextField fx:id="eventLocationTextField" prefHeight="25.0" prefWidth="237.0">
+                <HBox.margin>
+                    <Insets left="5.0" top="4.0" />
+                </HBox.margin>
+            </TextField>
+        </children>
+      </HBox>
+   <Pane prefHeight="200.0" prefWidth="200.0" />
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="backButton" mnemonicParsing="false" onAction="#backToMain" prefHeight="42.0" prefWidth="53.0" text="← ">
+            <font>
+               <Font name="Comic Sans MS" size="20.0" />
+            </font>
+         </Button>
+         <Pane prefHeight="42.0" prefWidth="262.0" />
+         <Button fx:id="saveButton" mnemonicParsing="false" onAction="#addEvent" text="Mentés">
+            <font>
+               <Font name="Comic Sans MS" size="20.0" />
+            </font>
+         </Button>
+      </children>
+   </HBox>
+
+</VBox>
