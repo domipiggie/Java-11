@@ -1,0 +1,39 @@
+.leftside{
+-fx-background-image:  url("https://media.tenor.com/W1fgRykm8HcAAAAM/brendon-lakatos.gif");
+-fx-background-repeat: stretch;
+    -fx-background-size: 313 400;
+    -fx-background-position: center center;
+}
+
+.szov{
+-fx-font-family: "Quicksand";
+   -fx-font-size: 18;
+   -fx-padding: 1,1,1,1;
+   -fx-border-color: lightblue;
+   -fx-border-width: 2;
+   -fx-border-radius: 1;
+   -fx-border: gone;
+   -fx-background-color: transparent;
+   -fx-text-fill: black;
+
+}
+
+.button{
+-fx-background-color: lightblue;
+}
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-background ;
+}
+
+.k{
+-fx-background-image:  url("https://holdpont.hu/sites/default/files/tv/Majka001.jpg");
+-fx-background-repeat: stretch;
+    -fx-background-size: 626 400;
+    -fx-background-position: center center;
+}
